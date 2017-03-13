@@ -1,6 +1,6 @@
 {% set name = "ipyvolume" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "8da76c8b35422464e776ec2eaf4c59531ed50020467c0765663be65885853e85" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "3ad5f6b2e7548be28106a7c64a9507532bb40a4b64778f8b3f2c89ca3adbac76" %}
 
 package:
   name: {{ name|lower }}

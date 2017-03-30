@@ -23,7 +23,7 @@ requirements:
     - python
     - traittypes
     - traitlets
-    - ipywidgets >= 6.0
+    - ipywidgets >=6.0
     - pillow
     - scipy
     - numpy

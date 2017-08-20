@@ -29,6 +29,7 @@ requirements:
     - numpy
     - scikit-image >=0.13
     - requests
+    - ipywebrtc
 
 test:
   imports:

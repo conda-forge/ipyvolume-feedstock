@@ -1,6 +1,6 @@
 {% set name = "ipyvolume" %}
-{% set version = "0.4.0" %}
-{% set sha256 = "8f6f5a56ebbecbff76f35115040776dee6c638aa64ca6235ddf3066c89d5e09b" %}
+{% set version = "0.3.2" %}
+{% set sha256 = "165f0f1f60457b64d01400816e0e19bc9f304a63bc06755a4ca6457c8be238c3" %}
 
 package:
   name: {{ name|lower }}
@@ -23,13 +23,10 @@ requirements:
     - python
     - traittypes
     - traitlets
-    - ipywidgets >=7.0
+    - ipywidgets >=6.0
     - pillow
     - scipy
     - numpy
-    - scikit-image >=0.13
-    - requests
-    - ipywebrtc
 
 test:
   imports:

@@ -1,6 +1,6 @@
 {% set name = "ipyvolume" %}
-{% set version = "0.4.0" %}
-{% set sha256 = "8f6f5a56ebbecbff76f35115040776dee6c638aa64ca6235ddf3066c89d5e09b" %}
+{% set version = "0.4.1" %}
+{% set sha256 = "6f804e6547a346eb5e25cacbcb552ccbc0636a0e7de5ca771150c1b99ae7b9ca" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:

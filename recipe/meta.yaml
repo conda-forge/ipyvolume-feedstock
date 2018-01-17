@@ -1,6 +1,6 @@
 {% set name = "ipyvolume" %}
-{% set version = "0.4.2" %}
-{% set sha256 = "738738d104899c046913041c3f92aa3ac274f4127bd8e052120be21f32f4eddd" %}
+{% set version = "0.4.3" %}
+{% set sha256 = "a37f08b8d35a319c92e5055ec14a1b64d641722c3f6f59ddccd77cf550fbcb12" %}
 
 package:
   name: {{ name|lower }}
@@ -30,6 +30,7 @@ requirements:
     - scikit-image >=0.13
     - requests
     - ipywebrtc
+    - notebook >=5.3
 
 test:
   imports:

@@ -1,6 +1,6 @@
 {% set name = "ipyvolume" %}
-{% set version = "0.4.5" %}
-{% set sha256 = "90de0c2e3fb9e3d234f6a80c2cffbec8100ce9061cf459758c77b8054d1312dd" %}
+{% set version = "0.4.6" %}
+{% set sha256 = "a4e570305655c9c213bf7dbee869192692cee6cdc809a713c192ff57b15a3189" %}
 
 package:
   name: {{ name|lower }}
@@ -12,11 +12,13 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
   run:

@@ -1,5 +1,4 @@
 {% set version = "0.5.0" %}
-{% set sha256 = "e6fbb81f65b54cc5075a98b10cdabe8513ced06639abc9dacb7749579d25a06a" %}
 
 package:
   name: ipyvolume
@@ -7,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/ipyvolume/ipyvolume-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: e6fbb81f65b54cc5075a98b10cdabe8513ced06639abc9dacb7749579d25a06a
 
 build:
   number: 0

@@ -1,6 +1,6 @@
 {% set name = "ipyvolume" %}
-{% set version = "0.4.6" %}
-{% set sha256 = "a4e570305655c9c213bf7dbee869192692cee6cdc809a713c192ff57b15a3189" %}
+{% set version = "0.5.1" %}
+{% set sha256 = "2463e8d6eee296f45a651464042cd1e0b35a961c846726fc0c928ff44d374c61" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:

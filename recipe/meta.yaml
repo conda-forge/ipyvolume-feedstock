@@ -1,25 +1,21 @@
-{% set name = "ipyvolume" %}
 {% set version = "0.4.6" %}
-{% set sha256 = "a4e570305655c9c213bf7dbee869192692cee6cdc809a713c192ff57b15a3189" %}
 
 package:
-  name: {{ name|lower }}
+  name: ipyvolume
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/i/ipyvolume/ipyvolume-{{ version }}.tar.gz
+  sha256: a4e570305655c9c213bf7dbee869192692cee6cdc809a713c192ff57b15a3189
 
 build:
-  number: 2
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 3
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
-    - pip
     - python
-    - setuptools
+    - pip
   run:
     - python
     - traittypes

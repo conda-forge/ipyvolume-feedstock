@@ -2,6 +2,7 @@
 {% set version = "0.5.1" %}
 {% set sha256 = "2463e8d6eee296f45a651464042cd1e0b35a961c846726fc0c928ff44d374c61" %}
 
+
 package:
   name: ipyvolume
   version: {{ version }}

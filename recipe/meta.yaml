@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
@@ -24,7 +24,14 @@ requirements:
     - traittypes
     - traitlets
     - ipywidgets >=7.4
-    - pillow
+    # We constraints pillow version on Windows
+    # as it seems to trigger some DLL errors. See
+    # here for more informations:
+    #   - https://github.com/conda-forge/ipyvolume-feedstock/pull/28
+    #   - https://github.com/maartenbreddels/ipyvolume/issues/208#issuecomment-442877181
+    #   - https://github.com/conda-forge/pillow-feedstock/issues/45
+    - pillow >5.2  # [win]
+    - pillow  # [not win]
     - scipy
     - numpy
     - scikit-image >=0.13

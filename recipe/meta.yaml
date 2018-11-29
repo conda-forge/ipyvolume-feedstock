@@ -24,7 +24,7 @@ requirements:
     - traittypes
     - traitlets
     - ipywidgets >=7.4
-    - pillow
+    - pillow >5.2
     - scipy
     - numpy
     - scikit-image >=0.13

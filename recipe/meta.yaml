@@ -1,6 +1,6 @@
 {% set name = "ipyvolume" %}
-{% set version = "0.5.2" %}
-{% set sha256 = "19cbdeea2d889cd1bb70f7b82f814833ad0b3d115c8171d7b7860851d8fbbd26" %}
+{% set version = "0.6.0a3" %}
+{% set sha256 = "cd4c68a2367373b6a6fd184aa5f58a3494b6b0434de05e3ab5e21e6597d55f41" %}
 
 
 package:
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   noarch: python
 

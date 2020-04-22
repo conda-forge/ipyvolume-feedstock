@@ -25,14 +25,13 @@ requirements:
     - traittypes
     - traitlets
     - ipywidgets >=7.4
-    # We constraints pillow version on Windows
+    # We need constraints pillow version on Windows, but due to noarch will require it for all os
     # as it seems to trigger some DLL errors. See
     # here for more informations:
     #   - https://github.com/conda-forge/ipyvolume-feedstock/pull/28
     #   - https://github.com/maartenbreddels/ipyvolume/issues/208#issuecomment-442877181
     #   - https://github.com/conda-forge/pillow-feedstock/issues/45
-    # - pillow >5.2  # [win]
-    # - pillow  # [not win]
+    - pillow >5.2
     - scipy
     - numpy
     - scikit-image >=0.13

@@ -31,8 +31,8 @@ requirements:
     #   - https://github.com/conda-forge/ipyvolume-feedstock/pull/28
     #   - https://github.com/maartenbreddels/ipyvolume/issues/208#issuecomment-442877181
     #   - https://github.com/conda-forge/pillow-feedstock/issues/45
-    - pillow >5.2  # [win]
-    - pillow  # [not win]
+    # - pillow >5.2  # [win]
+    # - pillow  # [not win]
     - scipy
     - numpy
     - scikit-image >=0.13

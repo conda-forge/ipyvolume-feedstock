@@ -38,6 +38,7 @@ requirements:
     - requests
     - ipywebrtc >=0.4
     - pythreejs >=1.0
+    - bqplot >=0.12
 
 test:
   imports:

@@ -1,4 +1,4 @@
-{% set version = "0.6.0a8" %}
+{% set version = "0.6.0" %}
 
 package:
   name: ipyvolume
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/ipyvolume/ipyvolume-{{ version }}.tar.gz
-  sha256: d8f3da5c803c0e8e1ee051841ad8bf35595cddac272d13a4d210aa98cc4e4168
+  sha256: 3d7f5cabdd4c105ff7cf59d49841a30e400f0565cda250d7636ff44243d63d3f
 
 build:
   number: 0
@@ -56,7 +56,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'IPython widget for rendering 3d volumes in the Jupter notebook'
+  summary: IPython widget for rendering 3d volumes in the Jupter notebook
   doc_url: https://ipyvolume.readthedocs.io/
   dev_url: https://github.com/maartenbreddels/ipyvolume
 

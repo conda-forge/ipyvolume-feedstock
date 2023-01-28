@@ -1,4 +1,4 @@
-{% set version = "0.6.0a8" %}
+{% set version = "0.6.0" %}
 
 package:
   name: ipyvolume
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/ipyvolume/ipyvolume-{{ version }}.tar.gz
-  sha256: d8f3da5c803c0e8e1ee051841ad8bf35595cddac272d13a4d210aa98cc4e4168
+  sha256: 3d7f5cabdd4c105ff7cf59d49841a30e400f0565cda250d7636ff44243d63d3f
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install -vv .
+  script: {{ PYTHON }} -m pip install -vv . --no-deps
 
 requirements:
   host:
@@ -20,24 +20,22 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - python >=3.6
-    - traittypes
-    - traitlets
-    - ipywidgets >=7.4
-    # We need constraints pillow version on Windows, but due to noarch will require it for all os
-    # as it seems to trigger some DLL errors. See
-    # here for more informations:
-    #   - https://github.com/conda-forge/ipyvolume-feedstock/pull/28
-    #   - https://github.com/maartenbreddels/ipyvolume/issues/208#issuecomment-442877181
-    #   - https://github.com/conda-forge/pillow-feedstock/issues/45
-    - pillow >5.2
-    - scipy
-    - numpy
-    - scikit-image >=0.13
-    - requests
-    - ipywebrtc >=0.4
-    - pythreejs >=1.0
     - bqplot >=0.12
+    - ipyvue >=1.7.0
+    - ipyvuetify
+    - ipywebrtc >=0.4
+    - ipywidgets >=7.0.0
+    - matplotlib-base
+    - numpy
+    - pillow >5.2
+    - python >=3.6
+    - pythreejs >=2.4.0
+    - requests
+    - scikit-image >=0.13
+    - scipy
+    - traitlets
+    - traittypes
+
 
 test:
   imports:
@@ -45,18 +43,19 @@ test:
   requires:
     - pip
     - jupyterlab >=3,<4.0
+    - m2-grep  # [win]
   commands:
     - pip check
     - jupyter labextension list
     - jupyter labextension list 1>labextensions 2>&1
-    - cat labextensions | grep "ipyvolume.*OK"  # [unix]
+    - grep -iE "ipyvolume.*OK" labextensions
 
 about:
   home: https://github.com/maartenbreddels/ipyvolume
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'IPython widget for rendering 3d volumes in the Jupter notebook'
+  summary: IPython widget for rendering 3d volumes in the Jupter notebook
   doc_url: https://ipyvolume.readthedocs.io/
   dev_url: https://github.com/maartenbreddels/ipyvolume
 

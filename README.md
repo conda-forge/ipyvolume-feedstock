@@ -1,11 +1,11 @@
-About ipyvolume
-===============
+About ipyvolume-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipyvolume-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/maartenbreddels/ipyvolume
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipyvolume-feedstock/blob/main/LICENSE.txt)
 
 Summary: IPython widget for rendering 3d volumes in the Jupter notebook
 

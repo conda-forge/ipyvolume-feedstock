@@ -1,4 +1,4 @@
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: ipyvolume
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/ipyvolume/ipyvolume-{{ version }}.tar.gz
-  sha256: 79d1c2028766072074a8106d5dbb9f8f7fa0d775f6b94e70fb9a543e2fd9b986
+  sha256: 823226f90a59ce08b1da2699a9ec505f34f65f01ce43accd80e7d3554082d035
 
 build:
   number: 0

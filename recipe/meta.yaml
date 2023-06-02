@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install -vv . --no-deps
+  script: {{ PYTHON }} -m pip install -vv . --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -51,13 +51,13 @@ test:
     - grep -iE "ipyvolume.*OK" labextensions
 
 about:
-  home: https://github.com/maartenbreddels/ipyvolume
+  home: https://github.com/widgetti/ipyvolume
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: IPython widget for rendering 3d volumes in the Jupter notebook
-  doc_url: https://ipyvolume.readthedocs.io/
-  dev_url: https://github.com/maartenbreddels/ipyvolume
+  summary: IPython widget for rendering 3d volumes
+  doc_url: https://ipyvolume.readthedocs.io
+  dev_url: https://github.com/widgetti/ipyvolume
 
 extra:
   recipe-maintainers:

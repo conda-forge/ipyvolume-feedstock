@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/i/ipyvolume/ipyvolume-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/i/ipyvolume/ipyvolume-{{ version }}.tar.gz
   sha256: 823226f90a59ce08b1da2699a9ec505f34f65f01ce43accd80e7d3554082d035
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install -vv . --no-deps --no-build-isolation
 
@@ -18,7 +18,7 @@ requirements:
     - jupyter-packaging >=0.7.9,<0.8
     - jupyterlab >=3.0,<4
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - bqplot >=0.12
     - ipyvue >=1.7.0
@@ -28,7 +28,7 @@ requirements:
     - matplotlib-base
     - numpy
     - pillow >5.2
-    - python >=3.6
+    - python >={{ python_min }}
     - pythreejs >=2.4.0
     - requests
     - scikit-image >=0.13
@@ -44,6 +44,7 @@ test:
     - pip
     - jupyterlab >=3,<4.0
     - m2-grep  # [win]
+    - python {{ python_min }}
   commands:
     - pip check
     - jupyter labextension list

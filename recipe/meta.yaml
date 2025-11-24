@@ -11,16 +11,18 @@ source:
 build:
   number: 2
   noarch: python
-  script: {{ PYTHON }} -m pip install -vv . --no-deps --no-build-isolation
+  script:
+    - {{ PYTHON }} -m pip install -vv . --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
     - jupyter-packaging >=0.7.9,<0.8
     - jupyterlab >=3.0,<4
     - pip
-    - python {{ python_min }}
+    - python {{ python_min }}.*
   run:
     - bqplot >=0.12
+    - ipython_genutils
     - ipyvue >=1.7.0
     - ipyvuetify
     - ipywebrtc >=0.4
@@ -35,8 +37,6 @@ requirements:
     - scipy
     - traitlets
     - traittypes
-    - ipython_genutils
-
 
 test:
   imports:
